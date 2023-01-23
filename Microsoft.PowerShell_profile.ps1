@@ -1,6 +1,5 @@
 #clear
 # jetbrains
-# New-Alias -Name android -Value 'C:\Users\Rachad\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\212.5712.43.2112.8815526\bin\studio64.exe'
 New-Alias -Name android -Value 'C:\Users\Rachad\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\JetBrains Toolbox\Android Studio.lnk'
 New-Alias -Name webstorm -Value 'C:\Users\Rachad\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\JetBrains Toolbox\WebStorm.lnk'
 New-Alias -Name rider -Value 'C:\Users\Rachad\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\JetBrains Toolbox\Rider.lnk'
@@ -32,7 +31,6 @@ New-Alias -Name weka -Value 'C:\ProgramData\Microsoft\Windows\Start Menu\Program
 New-Alias -Name cPicker -Value 'C:\Program Files (x86)\color picker\jcpicker.exe'
 New-Alias -Name figma -Value 'C:\Users\Rachad\AppData\Local\Figma\Figma.exe'
 New-Alias -Name nicePage -Value 'C:\Users\Rachad\AppData\Local\Programs\Nicepage\Nicepage.exe'
-New-Alias -Name xampp -Value 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\XAMPP\XAMPP Control Panel.lnk'
 New-Alias -Name prolog -Value 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\SWI-Prolog\SWI-Prolog.lnk'
 New-Alias -Name postMan -Value 'C:\Users\Rachad\AppData\Local\Postman\Postman.exe'
 # mircorosft office
