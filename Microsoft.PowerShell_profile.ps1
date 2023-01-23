@@ -41,29 +41,55 @@ New-Alias -Name access -Value 'C:\Program Files\Microsoft Office\root\Office16\M
 New-Alias -Name visio -Value 'C:\Program Files\Microsoft Office\root\Office16\VISIO.EXE'
 #
 
-function runPhp {
-    php -S localhost:80 -t .
+#git
+function gst { git status }
+function ga { git add $args }
+function gc { git commit -m $args }
+
+function gd { git diff $args }
+
+function gl { git log $args }
+
+function gp { git push $args }
+
+function gr { git pull $args }
+#php
+function phpr { php -S localhost:8000 -t $args }
+#django
+function dmanage { py manage.py $args }
+function ds { py manage.py startapp $args }
+function dm { python manage.py makemigrations }
+function dmr { python manage.py migrate }
+function drs { python manage.py runserver }
+function dshell { python manage.py shell }
+function createdcsusuperuser { py manage.py createsuperuser }
+#laravel
+function laroute {
+    php artisan route:list $args
 }
-function migration {
-    py manage.py makemigrations
-}
-function migrate {
-    py manage.py migrate
-}
-function runserver {
-    py manage.py runserver
-}
-function createsuperuser {
-    py manage.py createsuperuser
-}
+
+function laclear { php artisan cache:clear $args }
+
+function laconfig { php artisan config:clear $args }
+
+function lacomposer { composer install $args }
+
+function lak { php artisan key:generate $args }
+
+function lamig { php artisan migrate $args }
+
+function las { php artisan serve $args }
+
+function lac { php artisan config:cache $args }
+
+
+
+
+
 #shutdonw restart
 
-function off {
-    shutdown /s /t 0
-}
-function restart {
-    shutdown /r /t 0
-}
+function off { shutdown /s /t 0 }
+function restart { shutdown /r /t 0 }
 function checkForUpdate {
     try {
         [char]$value = Read-Host -Prompt 'Check for Update?([Y]es/[N]o)'
@@ -81,9 +107,39 @@ function admin {
     start-process wt -verb runas
     exit
 }
-function runphp {
-    php -S localhost:8080 -t .
-} 
+
+function goto {
+    param (
+        $location
+    )
+    
+    Switch ($location) {
+        "D" {
+            Set-Location -Path "D:"
+        }
+        "E" {
+            Set-Location -Path "E:"
+        }
+        "vz" {
+            Set-Location -Path "C:\Users\Rachad\Documents\verezone"
+        }
+        "ap"{
+            Set-Location -Path "C:\Users\Rachad\AndroidStudioProjects"
+        }
+        "phpp"{
+            Set-Location -Path "C:\Users\Rachad\PhpstormProjects"
+        }
+        "laser"{
+            Set-Location -Path "C:\Users\Rachad\Documents\laser"
+        }
+        
+        default {
+            Write-Output "Invalid location"
+        }
+    }
+}
+
+
 Invoke-Expression (&starship init powershell)
 # checkForUpdate
 
