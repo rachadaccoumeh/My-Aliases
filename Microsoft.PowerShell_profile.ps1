@@ -27,12 +27,11 @@ New-Alias -Name photoshop -Value 'C:\Program Files\Adobe\Adobe Photoshop 2022\ph
 New-Alias -Name premiere -Value 'C:\Program Files\Adobe\Adobe Premiere Pro 2022\Adobe Premiere Pro.exe'
 New-Alias -Name xd -Value 'C:\Program Files\WindowsApps\Adobe.XD_54.1.12.1_x64__pc75e8sa7ep4e\XD.exe'
 New-Alias -Name notepad++ -Value 'C:\Program Files\Notepad++\notepad++.exe'
-New-Alias -Name weka -Value 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Weka 3.9.6\Weka 3.9.6.lnk'
 New-Alias -Name cPicker -Value 'C:\Program Files (x86)\color picker\jcpicker.exe'
 New-Alias -Name figma -Value 'C:\Users\Rachad\AppData\Local\Figma\Figma.exe'
 New-Alias -Name nicePage -Value 'C:\Users\Rachad\AppData\Local\Programs\Nicepage\Nicepage.exe'
-New-Alias -Name prolog -Value 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\SWI-Prolog\SWI-Prolog.lnk'
 New-Alias -Name postMan -Value 'C:\Users\Rachad\AppData\Local\Postman\Postman.exe'
+New-Alias -Name slack -Value 'C:\Users\Rachad\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Slack Technologies Inc\Slack.lnk'
 # mircorosft office
 New-Alias -Name word -Value 'C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE'
 New-Alias -Name excel -Value 'C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE'
@@ -62,7 +61,7 @@ function dm { python manage.py makemigrations }
 function dmr { python manage.py migrate }
 function drs { python manage.py runserver }
 function dshell { python manage.py shell }
-function createdcsusuperuser { py manage.py createsuperuser }
+function dcsu { py manage.py createsuperuser }
 #laravel
 function laroute {
     php artisan route:list $args
@@ -123,13 +122,13 @@ function goto {
         "vz" {
             Set-Location -Path "C:\Users\Rachad\Documents\verezone"
         }
-        "ap"{
+        "ap" {
             Set-Location -Path "C:\Users\Rachad\AndroidStudioProjects"
         }
-        "phpp"{
+        "phpp" {
             Set-Location -Path "C:\Users\Rachad\PhpstormProjects"
         }
-        "laser"{
+        "laser" {
             Set-Location -Path "C:\Users\Rachad\Documents\laser"
         }
         
@@ -138,7 +137,12 @@ function goto {
         }
     }
 }
+function .. { Set-Location .. }
 
+function ... {
+    Set-Location .. 
+    Set-Location .. 
+}
 
 Invoke-Expression (&starship init powershell)
 # checkForUpdate
