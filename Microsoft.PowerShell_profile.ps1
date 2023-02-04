@@ -32,6 +32,7 @@ New-Alias -Name figma -Value 'C:\Users\Rachad\AppData\Local\Figma\Figma.exe'
 New-Alias -Name nicePage -Value 'C:\Users\Rachad\AppData\Local\Programs\Nicepage\Nicepage.exe'
 New-Alias -Name postMan -Value 'C:\Users\Rachad\AppData\Local\Postman\Postman.exe'
 New-Alias -Name slack -Value 'C:\Users\Rachad\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Slack Technologies Inc\Slack.lnk'
+New-Alias -Name blender -Value 'C:\Program Files\Blender Foundation\Blender 3.4\blender-launcher.exe'
 # mircorosft office
 New-Alias -Name word -Value 'C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE'
 New-Alias -Name excel -Value 'C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE'
@@ -122,7 +123,7 @@ function goto {
         "vz" {
             Set-Location -Path "C:\Users\Rachad\Documents\verezone"
         }
-        "ap" {
+        "asp" {
             Set-Location -Path "C:\Users\Rachad\AndroidStudioProjects"
         }
         "phpp" {
@@ -130,6 +131,12 @@ function goto {
         }
         "laser" {
             Set-Location -Path "C:\Users\Rachad\Documents\laser"
+        }
+        "pyp" {
+            Set-Location -Path "C:\Users\Rachad\PycharmProjects"
+        }
+        "doc"{
+            Set-Location -Path "C:\Users\Rachad\Documents"
         }
         
         default {
