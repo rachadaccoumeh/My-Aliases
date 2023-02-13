@@ -63,6 +63,8 @@ function dmr { python manage.py migrate }
 function drs { python manage.py runserver }
 function dshell { python manage.py shell }
 function dcsu { py manage.py createsuperuser }
+
+function pir { pip install -r requirements.txt }
 #laravel
 function laroute {
     php artisan route:list $args
@@ -135,7 +137,7 @@ function goto {
         "pyp" {
             Set-Location -Path "C:\Users\Rachad\PycharmProjects"
         }
-        "doc"{
+        "doc" {
             Set-Location -Path "C:\Users\Rachad\Documents"
         }
         
