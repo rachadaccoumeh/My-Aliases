@@ -22,7 +22,7 @@ New-Alias -Name vsInstaller -Value 'C:\Program Files (x86)\Microsoft Visual Stud
 New-Alias -Name whatsapp -Value 'C:\Users\Rachad\AppData\Local\WhatsApp\WhatsApp.exe'
 New-Alias -Name zoom -Value 'C:\Users\Rachad\AppData\Roaming\Zoom\bin\Zoom.exe'
 New-Alias -Name obsidian -Value 'C:\Users\Rachad\AppData\Local\Obsidian\Obsidian.exe'
-New-Alias -Name virtualBox -Value 'C:\Program Files\Oracle\VirtualBox\VirtualBox.exe'
+New-Alias -Name vBox -Value 'C:\Program Files\Oracle\VirtualBox\VirtualBox.exe'
 New-Alias -Name photoshop -Value 'C:\Program Files\Adobe\Adobe Photoshop 2022\photoshop.exe'
 New-Alias -Name premiere -Value 'C:\Program Files\Adobe\Adobe Premiere Pro 2022\Adobe Premiere Pro.exe'
 New-Alias -Name xd -Value 'C:\Program Files\WindowsApps\Adobe.XD_54.1.12.1_x64__pc75e8sa7ep4e\XD.exe'
@@ -33,6 +33,9 @@ New-Alias -Name nicePage -Value 'C:\Users\Rachad\AppData\Local\Programs\Nicepage
 New-Alias -Name postMan -Value 'C:\Users\Rachad\AppData\Local\Postman\Postman.exe'
 New-Alias -Name slack -Value 'C:\Users\Rachad\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Slack Technologies Inc\Slack.lnk'
 New-Alias -Name blender -Value 'C:\Program Files\Blender Foundation\Blender 3.4\blender-launcher.exe'
+New-Alias -Name vp -Value 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Paradigm CE\Visual Paradigm 17.0.lnk'
+New-Alias -Name matlab -Value 'C:\Program Files\MATLAB\R2017a\bin\matlab.exe'
+New-Alias -Name matlab -Value 'C:\Program Files (x86)\FormatFactory\FormatFactory.exe'
 # mircorosft office
 New-Alias -Name word -Value 'C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE'
 New-Alias -Name excel -Value 'C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE'
@@ -54,7 +57,16 @@ function gp { git push $args }
 
 function gr { git pull $args }
 #php
-function phpr { php -S localhost:8000 -t $args }
+function phpr {
+    if ($args) {
+        php -S localhost:8000 -t $args 
+    }
+    else {
+        php -S localhost:8000 -t .
+    }
+}
+     
+
 #django
 function dmanage { py manage.py $args }
 function ds { py manage.py startapp $args }
