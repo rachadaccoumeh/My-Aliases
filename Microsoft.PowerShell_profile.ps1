@@ -35,7 +35,7 @@ New-Alias -Name slack -Value 'C:\Users\Rachad\AppData\Roaming\Microsoft\Windows\
 New-Alias -Name blender -Value 'C:\Program Files\Blender Foundation\Blender 3.4\blender-launcher.exe'
 New-Alias -Name vp -Value 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Paradigm CE\Visual Paradigm 17.0.lnk'
 New-Alias -Name matlab -Value 'C:\Program Files\MATLAB\R2017a\bin\matlab.exe'
-New-Alias -Name matlab -Value 'C:\Program Files (x86)\FormatFactory\FormatFactory.exe'
+New-Alias -Name ff -Value 'C:\Program Files (x86)\FormatFactory\FormatFactory.exe'
 # mircorosft office
 New-Alias -Name word -Value 'C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE'
 New-Alias -Name excel -Value 'C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE'
