@@ -19,7 +19,6 @@ New-Alias -Name obs -Value 'C:\ProgramData\Microsoft\Windows\Start Menu\Programs
 New-Alias -Name unlocker -Value 'C:\Program Files (x86)\Unlocker\Unlocker.exe'
 New-Alias -Name studio -Value 'C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\devenv.exe'
 New-Alias -Name vsInstaller -Value 'C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.exe'
-New-Alias -Name whatsapp -Value 'C:\Users\Rachad\AppData\Local\WhatsApp\WhatsApp.exe'
 New-Alias -Name zoom -Value 'C:\Users\Rachad\AppData\Roaming\Zoom\bin\Zoom.exe'
 New-Alias -Name obsidian -Value 'C:\Users\Rachad\AppData\Local\Obsidian\Obsidian.exe'
 New-Alias -Name vBox -Value 'C:\Program Files\Oracle\VirtualBox\VirtualBox.exe'
@@ -43,6 +42,10 @@ New-Alias -Name powerPoint -Value 'C:\Program Files\Microsoft Office\root\Office
 New-Alias -Name access -Value 'C:\Program Files\Microsoft Office\root\Office16\MSACCESS.EXE'
 New-Alias -Name visio -Value 'C:\Program Files\Microsoft Office\root\Office16\VISIO.EXE'
 #
+
+function whatsapp {
+    Start-Process whatsapp:
+}
 
 #git
 function gst { git status }
